@@ -1,0 +1,27 @@
+name = "Hugo Terminal"
+license = "MIT"
+licenselink = "https://github.com/panr/hugo-theme-terminal/blob/master/LICENSE.md"
+description = "A simple, retro theme for Hugo"
+homepage = "https://github.com/panr/hugo-theme-terminal"
+demosite = "https://hugo-terminal.now.sh/"
+
+features = [
+  "Responsive",
+  "Dark/Light mode",
+  "Fast",
+  "SEO optimized",
+  "Tags",
+  "Categories",
+  "Social links",
+  "Customizable"
+]
+
+[author]
+  name = "Radek Kozieł"
+  homepage = "https://panr.io/"
+
+# If porting an existing theme
+[original]
+  name = "Hugo Terminal"
+  homepage = "https://github.com/panr/hugo-theme-terminal"
+  repo = "https://github.com/panr/hugo-theme-terminal.git"

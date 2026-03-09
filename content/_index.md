@@ -2,78 +2,78 @@
 title: "首页"
 date: 2026-03-09T16:06:00+08:00
 type: "home"
+layout: "home"
 ---
 
-# 👋 你好，我是 LittleTed
+```bash
+# 欢迎访问 LittleTed 的技术空间
 
-**嵌入式开发者 · 技术创作者 · 开源爱好者**
+$ whoami
+LittleTed - 嵌入式开发者 · 技术创作者 · 开源爱好者
 
-欢迎来到我的个人空间！这里记录了我的技术探索、项目经验和学习历程。
+$ pwd
+/home/littleted/tech-space
 
-## 🚀 近期动态
+$ ls -la
+drwxr-xr-x   projects/    # 项目作品展示
+drwxr-xr-x   blog/        # 技术博客文章  
+drwxr-xr-x   about/       # 个人介绍
+drwxr-xr-x   contact/     # 联系信息
+-rw-r--r--   README.md    # 站点说明
 
-### 📅 最新项目
-- **OpenClaw自动化测试** - 验证跨平台发布能力（2026-03-09）
-- **嵌入式CAN协议解析工具** - 开发中
-- **智能家居控制系统** - 原型阶段
+$ cat README.md
+## 🚀 关于这个空间
 
-### 📝 最新文章
-- [GitHub与Gitee双平台自动化发布实践](/blog/gitee-github-auto-release/)
-- [嵌入式开发中的版本管理策略](/blog/embedded-version-control/)
-- [如何构建个人技术品牌](/blog/personal-tech-brand/)
+这里是我记录技术探索、分享项目经验和思考学习的地方。
+从嵌入式开发到自动化工具，从开源贡献到技术写作，
+这个空间见证了我的技术成长历程。
 
-### 🎯 当前关注
-- 嵌入式系统架构优化
-- 自动化部署与CI/CD
-- 开源社区贡献
-- 技术写作与分享
+## 🛠️ 技术栈概览
 
-## 🛠️ 技术栈
+$ tech-stack --show
 
-<div class="tech-stack">
-  <div class="tech-category">
-    <h3>嵌入式开发</h3>
-    <span class="tech-tag">C/C++</span>
-    <span class="tech-tag">RTOS</span>
-    <span class="tech-tag">ESP32</span>
-    <span class="tech-tag">STM32</span>
-    <span class="tech-tag">ARM</span>
-  </div>
-  
-  <div class="tech-category">
-    <h3>前端技术</h3>
-    <span class="tech-tag">HTML/CSS/JS</span>
-    <span class="tech-tag">Vue.js</span>
-    <span class="tech-tag">Tailwind CSS</span>
-  </div>
-  
-  <div class="tech-category">
-    <h3>后端与运维</h3>
-    <span class="tech-tag">Python</span>
-    <span class="tech-tag">Node.js</span>
-    <span class="tech-tag">Docker</span>
-    <span class="tech-tag">Git</span>
-    <span class="tech-tag">CI/CD</span>
-  </div>
-</div>
+┌─────────────────────────────────────┐
+│         技术能力矩阵                 │
+├─────────────────────────────────────┤
+│ 嵌入式开发: ██████████ 90%          │
+│   • C/C++, RTOS, ESP32, STM32       │
+│                                      │
+│ 前端技术:   ████████ 80%            │
+│   • HTML/CSS/JS, Vue.js, Tailwind   │
+│                                      │
+│ 后端与运维: ████████ 75%            │
+│   • Python, Node.js, Docker, CI/CD  │
+└─────────────────────────────────────┘
 
-## 📊 站点统计
+## 📈 近期动态
 
-- **项目数量**: 12+
-- **文章数量**: 25+
-- **代码提交**: 500+
-- **站点建立**: 2026年3月
+$ journal --recent
 
-## 🤝 合作与交流
+[2026-03-09] 与AI助手协作构建个人技术站点
+[2026-02-28] 完成嵌入式CAN协议解析工具v1.0
+[2026-02-15] 开始在GitHub上系统分享技术文章
+[2026-02-01] 参与RT-Thread开源社区贡献
 
-我热衷于技术交流与合作，如果你：
-- 对嵌入式开发感兴趣
-- 想探讨技术问题
-- 有合作项目想法
-- 需要技术咨询
+## 🎯 当前关注
 
-欢迎通过[联系页面](/contact/)与我联系！
+$ focus --current
 
----
+• 嵌入式系统架构优化
+• 自动化部署与CI/CD实践  
+• 开源社区建设与贡献
+• 技术写作与知识传播
 
-> *"技术的价值在于分享，知识的魅力在于传播。"*
+## 🤝 合作邀请
+
+如果你对以下领域感兴趣：
+• 嵌入式系统开发
+• 自动化工具创建
+• 开源项目协作
+• 技术经验交流
+
+欢迎通过 contact/ 目录与我联系！
+
+$ echo "技术的价值在于分享，知识的魅力在于传播。"
+```
+
+> *终端风格的个人空间，用代码的方式呈现技术人生。*
