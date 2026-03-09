@@ -1,0 +1,91 @@
+# LittleTed个人站点配置
+baseURL: "https://littleted.github.io/"
+languageCode: "zh-cn"
+title: "LittleTed | 嵌入式开发者 · 技术创作者"
+theme: "hugo-theme-terminal"
+
+# 站点信息
+params:
+  # 个人信息
+  name: "LittleTed"
+  headline: "嵌入式开发者 & 技术创作者"
+  bio: "热爱嵌入式开发，喜欢分享技术经验，记录项目历程"
+  location: "中国"
+  avatar: "/images/avatar.jpg"
+  
+  # 社交链接
+  social:
+    - name: "Gitee"
+      icon: "fab fa-git-alt"
+      url: "https://gitee.com/little_ted"
+    - name: "GitHub"
+      icon: "fab fa-github"
+      url: "https://github.com/LittleTed"
+    - name: "Email"
+      icon: "fas fa-envelope"
+      url: "mailto:xiaoxi.ted@foxmail.com"
+  
+  # 主题设置
+  themeColor: "#3a7bd5"
+  backgroundColor: "#1a1a1a"
+  showThemeSwitcher: true
+  showScrollTop: true
+  
+  # 功能设置
+  showReadingTime: true
+  showTableOfContents: true
+  showBreadCrumbs: true
+  
+  # 创意元素
+  particles: true
+  typewriter: true
+  glitchEffect: false
+
+# 菜单配置
+menu:
+  main:
+    - identifier: "home"
+      name: "首页"
+      url: "/"
+      weight: 1
+    - identifier: "projects"
+      name: "项目"
+      url: "/projects/"
+      weight: 2
+    - identifier: "blog"
+      name: "博客"
+      url: "/blog/"
+      weight: 3
+    - identifier: "about"
+      name: "关于"
+      url: "/about/"
+      weight: 4
+    - identifier: "contact"
+      name: "联系"
+      url: "/contact/"
+      weight: 5
+
+# 构建设置
+build:
+  writeStats: true
+  useResourceCacheWhen: "always"
+
+# 输出格式
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+# 图片处理
+imaging:
+  quality: 85
+  anchor: "smart"
+
+# 安全头
+security:
+  enable: true
+  hsts:
+    maxAge: 31536000
+    includeSubDomains: true
+    preload: true
