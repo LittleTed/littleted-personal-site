@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LittleTed个人站点 - 建设中</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+        
+        .logo {
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: linear-gradient(90deg, #3a7bd5, #00d2ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px rgba(58, 123, 213, 0.5);
+            }
+            to {
+                text-shadow: 0 0 20px rgba(58, 123, 213, 0.8), 0 0 30px rgba(0, 210, 255, 0.6);
+            }
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            color: #a0a0a0;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+        }
+        
+        .status-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .status-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #3a7bd5;
+        }
+        
+        .progress-bar {
+            height: 6px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+            overflow: hidden;
+            margin: 1.5rem 0;
+        }
+        
+        .progress {
+            height: 100%;
+            background: linear-gradient(90deg, #3a7bd5, #00d2ff);
+            width: 65%;
+            border-radius: 3px;
+            animation: progress 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes progress {
+            from { width: 65%; }
+            to { width: 70%; }
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .feature {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        
+        .feature:hover {
+            transform: translateY(-5px);
+            border-color: rgba(58, 123, 213, 0.3);
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .feature-title {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: #3a7bd5;
+        }
+        
+        .feature-desc {
+            font-size: 0.9rem;
+            color: #a0a0a0;
+            line-height: 1.5;
+        }
+        
+        .links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        .btn {
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(90deg, #3a7bd5, #00d2ff);
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .footer {
+            margin-top: 3rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+            margin: 1.5rem 0;
+        }
+        
+        .tech-tag {
+            background: rgba(58, 123, 213, 0.1);
+            color: #3a7bd5;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            border: 1px solid rgba(58, 123, 213, 0.3);
+        }
+        
+        @media (max-width: 600px) {
+            .logo {
+                font-size: 2.5rem;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">LittleTed</div>
+        <div class="tagline">嵌入式开发者 · 技术创作者 · 开源爱好者</div>
+        
+        <div class="status-card">
+            <div class="status-title">🚀 个人站点正在建设中</div>
+            <p>这是一个创意与技术兼备的个人展示平台，将包含项目展示、技术博客和个人简历三大功能。</p>
+            
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            
+            <div class="tech-tags">
+                <span class="tech-tag">Hugo</span>
+                <span class="tech-tag">GitHub Pages</span>
+                <span class="tech-tag">Gitee Pages</span>
+                <span class="tech-tag">Tailwind CSS</span>
+                <span class="tech-tag">自动化部署</span>
+            </div>
+        </div>
+        
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">🚀</div>
+                <div class="feature-title">项目展示</div>
+                <div class="feature-desc">展示嵌入式项目、开源贡献和技术工具</div>
+            </div>
+            
+            <div class="feature">
+                <div class="feature-icon">📝</div>
+                <div class="feature-title">技术博客</div>
+                <div class="feature-desc">分享开发经验、技术思考和成长历程</div>
+            </div>
+            
+            <div class="feature">
+                <div class="feature-icon">👨‍💻</div>
+                <div class="feature-title">个人简历</div>
+                <div class="feature-desc">专业技能、项目经验和职业发展</div>
+            </div>
+            
+            <div class="feature">
+                <div class="feature-icon">🌐</div>
+                <div class="feature-title">双平台部署</div>
+                <div class="feature-desc">Gitee（国内快）+ GitHub（全球访问）</div>
+            </div>
+        </div>
+        
+        <div class="links">
+            <a href="https://gitee.com/little_ted/littleted-personal-site" class="btn btn-primary" target="_blank">
+                <i class="fab fa-git-alt"></i> Gitee仓库
+            </a>
+            <a href="https://github.com/LittleTed/littleted-personal-site" class="btn btn-secondary" target="_blank">
+                <i class="fab fa-github"></i> GitHub仓库
+            </a>
+            <a href="mailto:xiaoxi.ted@foxmail.com" class="btn btn-secondary">
+                <i class="fas fa-envelope"></i> 联系我
+            </a>
+        </div>
+        
+        <div class="footer">
+            <p>© 2026 LittleTed · 由OpenClaw AI助手协助构建</p>
+            <p style="margin-top: 0.5rem; font-size: 0.8rem; color: #444;">
+                预计上线时间：2026年3月 · 当前版本：Demo v0.1
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        // 简单的交互效果
+        document.addEventListener('DOMContentLoaded', function() {
+            const features = document.querySelectorAll('.feature');
+            features.forEach((feature, index) => {
+                feature.style.animationDelay = `${index * 0.1}s`;
+            });
+            
+            // 动态更新进度条
+            let progress = 65;
+            const progressBar = document.querySelector('.progress');
+            setInterval(() => {
+                progress = progress + (Math.random() * 2 - 1);
+                if (progress < 60) progress = 60;
+                if (progress > 75) progress = 75;
+                progressBar.style.width = `${progress}%`;
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
